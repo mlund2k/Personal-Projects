@@ -11,19 +11,20 @@
 
 ## Process
 
-A full outlined step by step documentation can be found through pastebin or github:
-- Github: 
-- Pastebin: https://pastebin.com/7rwxUaxx
+A full outlined step by step documentation with SQL queries and explanation can be found through pastebin or github:
+- [Github](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/proj_notes.txt)
+- [Pastebin](https://pastebin.com/7rwxUaxx)
 
 Part 2 of the analysis makes use of R markdown for a more interactive documentation. This can be found in the following links:
-- Github:
-- R Markdown (Kaggle): https://www.kaggle.com/code/mattlund2k/first-project-baseball-analysis
-
+- [R Markdown (Kaggle)](https://www.kaggle.com/code/mattlund2k/first-project-baseball-analysis) (Preferred)
+- [Github](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/proj.pdf) (pdf format)
+- [Github](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/proj.html) (raw html format)
 
 ## End Product
 
 Part 1 Uses Tableau to visualize the data, find the visual online here:
-- Tableau Dashboard: https://public.tableau.com/views/BaseballAnalysisfirstproject/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+- [Tableau Dashboard](https://public.tableau.com/views/BaseballAnalysisfirstproject/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- Or view a [pdf](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/Dashboard%201.pdf)
 
 Part 2 Uses ggplot2 in the R tidyverse package to manually construct a visual with code. Find the associated visual as part of the R Markdown:
-- R Markdown (Kaggle): https://www.kaggle.com/code/mattlund2k/first-project-baseball-analysis
+- [R Markdown (Kaggle)](https://www.kaggle.com/code/mattlund2k/first-project-baseball-analysis)
