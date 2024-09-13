@@ -23,7 +23,7 @@ Part 2 of the analysis makes use of R markdown for a more interactive documentat
 ## End Product
 
 Part 1 Uses Tableau to visualize the data, find the visual online here:
-- [Tableau Dashboard](https://public.tableau.com/views/BaseballAnalysisfirstproject/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- Inveract with [Tableau Dashboard](https://public.tableau.com/views/BaseballAnalysisfirstproject/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - Or view a [pdf](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/Dashboard%201.pdf)
 
 Part 2 Uses ggplot2 in the R tidyverse package to manually construct a visual with code. Find the associated visual as part of the R Markdown:
