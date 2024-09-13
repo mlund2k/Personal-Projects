@@ -11,6 +11,17 @@
 
 ## Process
 
+Firstly, the raw data found on [Kaggle](https://www.kaggle.com/datasets/seanlahman/the-history-of-baseball) was a bit messy with missing values, mislabelled columns, and extreneous data.
+I started by cleaning the files in Excel with filtering, altering data types, deleting extra columns, and implementing necessary formulas.
+The cleaned files to be used can be found here:
+- [Appearance Table](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/appearances_cleaned_2010-2014.csv)
+- [Home Games Table](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/home_game_cleaned_2010-2014.csv)
+- [Player Award Table](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/player_award_cleaned_2010-2014.csv)
+- [Players Table](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/player_cleaned_2010-2014.csv)
+- [Teams Table](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/team_cleaned_2010-2014.csv)
+
+For the next step, I chose to join various tables in SQL and create ranked lists for each metric within BigQuery.
+
 A full outlined step by step documentation with SQL queries and explanation can be found through pastebin or github:
 - [Github](https://github.com/mlund2k/Project-1-Baseball-Performance-vs.-Attendance/blob/main/proj_notes.txt)
 - [Pastebin](https://pastebin.com/7rwxUaxx)
