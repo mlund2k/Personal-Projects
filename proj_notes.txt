@@ -1,0 +1,227 @@
+Business Goal:
+
+Its 2015 and the stakeholder wants to invest in advertisements in a baseball stadium, and would potentially like to strike a brand deal with a high performing player on the team, ideally someone of mvp or all star status.
+
+During the analysis, the stakeholder in question is curious as to what, if any, game statistics may impact the turnout of audience for a particular season. Additionally, a visual of audience trends may assist in the stakeholders foresight when making a decision.
+
+--------------------------------------------------------------------------
+
+Business Plan:
+
+I will make use of past 5 season's (~2010-2014) data to predict the most suitable team for the stakeholder to invest. I'll then join datasets to find average attendance per team (home_game.csv + team.csv), and number of award winning players on said team (player_award.csv + appearances.csv + player.csv + team.csv), and present my findings with a list of a few teams that score highest based on the given metrics.
+
+------------------------------------------------------------------------------
+
+Sourcing + Cleaning Data:
+
+Source used: https://www.kaggle.com/datasets/seanlahman/the-history-of-baseball?select=salary.csv
+(History of Baseball Kaggle dataset 2015 by Sean Lahman)
+
+datasets not too large, so cleaned in a spreadsheet. started by removing extraneous columns, fixed team_ids to reflect official MLB team acronyms for consistency
+
+In cleaning, I have limited datasets to the following columns (variables):
+team.csv - year, team_id (primkey), name, park
+player_award.csv - player_id (primkey), award_id, year
+home_game.csv - year, team_id (primkey), games, attendance
+player.csv - player_id (primkey), name_first, name_last, *name_full
+appearances.csv - year, team_id, player_id (primkey)
+
+All sheets have been filtered to only include active data within the timeframe of 2010 to 2014. Appearances uses data solely from 2014 to determine the most up-to-date association of players for later analysis.
+
+----------------------------------------------------------------------------------
+
+Analysis Documentation:
+
+1. Identify teams with highest average ticket sales in the past 5 years, as well as teams with the highest number of award-winning players.
+
+x-load cleaned data into bigquery
+x-create a query that combines home_game.csv + team.csv with an inner join on team_id
+x-add calculated column for attendance/games to get average home game attendance during 2010-2014 grouped by team. sort by this metric to find roughly the top 10 best selling teams.
+
+'''
+WITH tickets AS (
+SELECT teams.team_id,
+  AVG(parks.attendance/parks.games) AS avg_attendance
+FROM exproj-1.Baseball.parks
+JOIN exproj-1.Baseball.teams
+ON parks.team_id=teams.team_id AND
+  parks.year=teams.year
+GROUP BY teams.team_id
+)
+SELECT CAST(AVG(tickets.avg_attendance) AS INT64) AS average_attendance,
+  teams.name,
+  teams.park
+FROM tickets
+JOIN exproj-1.Baseball.teams
+ON tickets.team_id=teams.team_id 
+GROUP BY teams.name, teams.park
+ORDER BY average_attendance DESC
+LIMIT 10
+'''
+
+Output:
+1	
+43563
+New York Yankees
+Yankee Stadium III
+2	
+42833
+Los Angeles Dodgers
+Dodger Stadium
+3	
+40908
+St. Louis Cardinals
+Busch Stadium III
+4	
+40734
+San Francisco Giants
+AT&T Park
+5	
+40321
+Philadelphia Phillies
+Citizens Bank Park
+6	
+38504
+Los Angeles Angels of Anaheim
+Angel Stadium
+7	
+36871
+Boston Red Sox
+Fenway Park II
+8	
+36471
+Texas Rangers
+Rangers Ballpark in Arlington
+9	
+34894
+Detroit Tigers
+Comerica Park
+10	
+34587
+Milwaukee Brewers
+Miller Park
+
+x-create a query that combines player_award.csv + player.csv with an inner join on player_id. group by player_id
+
+```
+SELECT players.player_id,
+  COUNT(awards.award_id) AS num_awards
+FROM exproj-1.Baseball.players
+JOIN exproj-1.Baseball.awards
+ON awards.player_id=players.player_id
+GROUP BY players.player_id
+ORDER BY num_awards DESC
+LIMIT 100
+```
+
+x-Perform an inner join on appearances.csv with team.csv on team_id. group by player_id
+
+```
+SELECT games.player_id,
+  teams.name,
+  COUNT(games.player_id) AS appearances
+FROM exproj-1.Baseball.games
+JOIN exproj-1.Baseball.teams
+ON teams.team_id=games.team_id
+GROUP BY teams.name, games.player_id
+ORDER BY appearances DESC
+```
+
+x-join each resulting table together on player_id, and group by team name to get a list of award winning players from an organization/team
+
+```
+WITH player_rank AS (
+  SELECT awards_ranked.player_id,
+    awards_ranked.num_awards,
+    appearances_ranked.name
+  FROM exproj-1.Baseball.awards_ranked
+  JOIN exproj-1.Baseball.appearances_ranked
+  ON awards_ranked.player_id=appearances_ranked.player_id
+  WHERE awards_ranked.num_awards >= 2
+)
+SELECT COUNT(players.name_full) AS Star_Players,
+  player_rank.name AS Team
+FROM player_rank
+JOIN exproj-1.Baseball.players
+ON player_rank.player_id=players.player_id
+GROUP BY Team
+ORDER BY Star_Players DESC
+```
+
+x-use above metric to select about 10 teams with the most award winning players.
+
+Output:
+1	
+5
+Los Angeles Dodgers
+2	
+4
+Los Angeles Angels of Anaheim
+3	
+4
+San Francisco Giants
+4	
+4
+Baltimore Orioles
+5	
+4
+Washington Nationals
+6	
+4
+New York Yankees
+7	
+4
+Atlanta Braves
+8	
+3
+Toronto Blue Jays
+9	
+3
+Colorado Rockies
+10	
+3
+Boston Red Sox
+
+
+Combining findings by team_ids:
+```
+SELECT star_players.star_players AS star_players,
+  tickets.average_attendance AS avg_attendance
+FROM exproj-1.Baseball.star_players
+JOIN exproj-1.Baseball.tickets
+ON star_players.team=tickets.name
+```
+-> stars_vs_attendance.csv
+
+-visuals using tableau + presentation
+
+
+
+
+2. Determine what game factors (if any) get people buying tickets.
+
+A suitable correlation coefficient is at least +- 0.7
+Star players is not a good metric, 0.205019 coefficient is relatively low.
+
+I will use the uncleaned teams.csv file to compare popular game metrics against average attendance on the basis of correlation coefficients.
+
+This process is outlined in proj.html along with a resulting visual using R to clean, analyze, and visualize the data.
+
+
+
+
+3. Check trends in average attendance over years 2010-2014
+
+Calculated the average attendance per game for each team over 2010-2014, joined with overall average attendance metric.
+
+```
+SELECT parks.year,
+  parks.team_id,
+  CAST(parks.attendance/parks.games AS INT64) AS avg_attendance
+FROM `exproj-1.Baseball.parks` AS parks
+```
+
+Plotted Average Attendance vs. Year with a filter for overall average attendance from all 5 years.
+
+included in Tableau Analysis.twbx and Tableau Analysis.pdf
+as well as the following interactable link: https://public.tableau.com/app/profile/matt.matt4307/viz/baseballanalysis1/Dashboard1#1
