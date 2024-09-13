@@ -1,0 +1,149 @@
+year,team_id,name,park
+2014,ARI,Arizona Diamondbacks,Chase Field
+2013,ARI,Arizona Diamondbacks,Chase Field
+2012,ARI,Arizona Diamondbacks,Chase Field
+2011,ARI,Arizona Diamondbacks,Chase Field
+2010,ARI,Arizona Diamondbacks,Chase Field
+2014,ATL,Atlanta Braves,Turner Field
+2013,ATL,Atlanta Braves,Turner Field
+2012,ATL,Atlanta Braves,Turner Field
+2011,ATL,Atlanta Braves,Turner Field
+2010,ATL,Atlanta Braves,Turner Field
+2014,BAL,Baltimore Orioles,Oriole Park at Camden Yards
+2013,BAL,Baltimore Orioles,Oriole Park at Camden Yards
+2012,BAL,Baltimore Orioles,Oriole Park at Camden Yards
+2011,BAL,Baltimore Orioles,Oriole Park at Camden Yards
+2010,BAL,Baltimore Orioles,Oriole Park at Camden Yards
+2014,BOS,Boston Red Sox,Fenway Park II
+2013,BOS,Boston Red Sox,Fenway Park II
+2012,BOS,Boston Red Sox,Fenway Park II
+2011,BOS,Boston Red Sox,Fenway Park II
+2010,BOS,Boston Red Sox,Fenway Park II
+2014,CHN,Chicago Cubs,Wrigley Field
+2013,CHN,Chicago Cubs,Wrigley Field
+2012,CHN,Chicago Cubs,Wrigley Field
+2011,CHN,Chicago Cubs,Wrigley Field
+2010,CHN,Chicago Cubs,Wrigley Field
+2014,CHA,Chicago White Sox,U.S. Cellular Field
+2013,CHA,Chicago White Sox,U.S. Cellular Field
+2012,CHA,Chicago White Sox,U.S. Cellular Field
+2011,CHA,Chicago White Sox,U.S. Cellular Field
+2010,CHA,Chicago White Sox,U.S. Cellular Field
+2014,CIN,Cincinnati Reds,Great American Ball Park
+2013,CIN,Cincinnati Reds,Great American Ball Park
+2012,CIN,Cincinnati Reds,Great American Ball Park
+2011,CIN,Cincinnati Reds,Great American Ball Park
+2010,CIN,Cincinnati Reds,Great American Ball Park
+2014,CLE,Cleveland Indians,Progressive Field
+2013,CLE,Cleveland Indians,Progressive Field
+2012,CLE,Cleveland Indians,Progressive Field
+2011,CLE,Cleveland Indians,Progressive Field
+2010,CLE,Cleveland Indians,Progressive Field
+2014,COL,Colorado Rockies,Coors Field
+2013,COL,Colorado Rockies,Coors Field
+2012,COL,Colorado Rockies,Coors Field
+2011,COL,Colorado Rockies,Coors Field
+2010,COL,Colorado Rockies,Coors Field
+2014,DET,Detroit Tigers,Comerica Park
+2013,DET,Detroit Tigers,Comerica Park
+2012,DET,Detroit Tigers,Comerica Park
+2011,DET,Detroit Tigers,Comerica Park
+2010,DET,Detroit Tigers,Comerica Park
+2014,HOU,Houston Astros,Minute Maid Park
+2013,HOU,Houston Astros,Minute Maid Park
+2012,HOU,Houston Astros,Minute Maid Park
+2011,HOU,Houston Astros,Minute Maid Park
+2010,HOU,Houston Astros,Minute Maid Park
+2014,KCA,Kansas City Royals,Kauffman Stadium
+2013,KCA,Kansas City Royals,Kauffman Stadium
+2012,KCA,Kansas City Royals,Kauffman Stadium
+2011,KCA,Kansas City Royals,Kauffman Stadium
+2010,KCA,Kansas City Royals,Kauffman Stadium
+2014,LAA,Los Angeles Angels of Anaheim,Angel Stadium
+2013,LAA,Los Angeles Angels of Anaheim,Angel Stadium
+2012,LAA,Los Angeles Angels of Anaheim,Angel Stadium
+2011,LAA,Los Angeles Angels of Anaheim,Angel Stadium
+2010,LAA,Los Angeles Angels of Anaheim,Angel Stadium
+2014,LAN,Los Angeles Dodgers,Dodger Stadium
+2013,LAN,Los Angeles Dodgers,Dodger Stadium
+2012,LAN,Los Angeles Dodgers,Dodger Stadium
+2011,LAN,Los Angeles Dodgers,Dodger Stadium
+2010,LAN,Los Angeles Dodgers,Dodger Stadium
+2014,MIA,Miami Marlins,Marlins Park
+2013,MIA,Miami Marlins,Marlins Park
+2012,MIA,Miami Marlins,Marlins Park
+2014,MIL,Milwaukee Brewers,Miller Park
+2013,MIL,Milwaukee Brewers,Miller Park
+2012,MIL,Milwaukee Brewers,Miller Park
+2011,MIL,Milwaukee Brewers,Miller Park
+2010,MIL,Milwaukee Brewers,Miller Park
+2014,MIN,Minnesota Twins,Target Field
+2013,MIN,Minnesota Twins,Target Field
+2012,MIN,Minnesota Twins,Target Field
+2011,MIN,Minnesota Twins,Target Field
+2010,MIN,Minnesota Twins,Target Field
+2014,NYN,New York Mets,Citi Field
+2013,NYN,New York Mets,Citi Field
+2012,NYN,New York Mets,Citi Field
+2011,NYN,New York Mets,Citi Field
+2010,NYN,New York Mets,Citi Field
+2014,NYA,New York Yankees,Yankee Stadium III
+2013,NYA,New York Yankees,Yankee Stadium III
+2012,NYA,New York Yankees,Yankee Stadium III
+2011,NYA,New York Yankees,Yankee Stadium III
+2010,NYA,New York Yankees,Yankee Stadium III
+2014,OAK,Oakland Athletics,O.co Coliseum
+2013,OAK,Oakland Athletics,O.co Coliseum
+2012,OAK,Oakland Athletics,O.co Coliseum
+2011,OAK,Oakland Athletics,O.co Coliseum
+2010,OAK,Oakland Athletics,O.co Coliseum
+2014,PHI,Philadelphia Phillies,Citizens Bank Park
+2013,PHI,Philadelphia Phillies,Citizens Bank Park
+2012,PHI,Philadelphia Phillies,Citizens Bank Park
+2011,PHI,Philadelphia Phillies,Citizens Bank Park
+2010,PHI,Philadelphia Phillies,Citizens Bank Park
+2014,PIT,Pittsburgh Pirates,PNC Park
+2013,PIT,Pittsburgh Pirates,PNC Park
+2012,PIT,Pittsburgh Pirates,PNC Park
+2011,PIT,Pittsburgh Pirates,PNC Park
+2010,PIT,Pittsburgh Pirates,PNC Park
+2014,SDN,San Diego Padres,Petco Park
+2013,SDN,San Diego Padres,Petco Park
+2012,SDN,San Diego Padres,Petco Park
+2011,SDN,San Diego Padres,Petco Park
+2010,SDN,San Diego Padres,Petco Park
+2014,SFN,San Francisco Giants,AT&T Park
+2013,SFN,San Francisco Giants,AT&T Park
+2012,SFN,San Francisco Giants,AT&T Park
+2011,SFN,San Francisco Giants,AT&T Park
+2010,SFN,San Francisco Giants,AT&T Park
+2014,SEA,Seattle Mariners,Safeco Field
+2013,SEA,Seattle Mariners,Safeco Field
+2012,SEA,Seattle Mariners,Safeco Field
+2011,SEA,Seattle Mariners,Safeco Field
+2010,SEA,Seattle Mariners,Safeco Field
+2014,SLN,St. Louis Cardinals,Busch Stadium III
+2013,SLN,St. Louis Cardinals,Busch Stadium III
+2012,SLN,St. Louis Cardinals,Busch Stadium III
+2011,SLN,St. Louis Cardinals,Busch Stadium III
+2010,SLN,St. Louis Cardinals,Busch Stadium III
+2014,TBA,Tampa Bay Rays,Tropicana Field
+2013,TBA,Tampa Bay Rays,Tropicana Field
+2012,TBA,Tampa Bay Rays,Tropicana Field
+2011,TBA,Tampa Bay Rays,Tropicana Field
+2010,TBA,Tampa Bay Rays,Tropicana Field
+2014,TEX,Texas Rangers,Rangers Ballpark in Arlington
+2013,TEX,Texas Rangers,Rangers Ballpark in Arlington
+2012,TEX,Texas Rangers,Rangers Ballpark in Arlington
+2011,TEX,Texas Rangers,Rangers Ballpark in Arlington
+2010,TEX,Texas Rangers,Rangers Ballpark in Arlington
+2014,TOR,Toronto Blue Jays,Rogers Centre
+2013,TOR,Toronto Blue Jays,Rogers Centre
+2012,TOR,Toronto Blue Jays,Rogers Centre
+2011,TOR,Toronto Blue Jays,Rogers Centre
+2010,TOR,Toronto Blue Jays,Rogers Centre
+2014,WAS,Washington Nationals,Nationals Park
+2013,WAS,Washington Nationals,Nationals Park
+2012,WAS,Washington Nationals,Nationals Park
+2011,WAS,Washington Nationals,Nationals Park
+2010,WAS,Washington Nationals,Nationals Park
